@@ -1,0 +1,113 @@
+Product ID,Brand,Product Name,Charger Type,Power Output,Suitable Vehicles,Description,Charger Price (INR),2 Month Lease (INR),6 Month Lease (INR),12 Month Lease (INR)
+EV001,Tata Power,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,98759,14813,39503,64193
+EV002,Tata Power,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,102843,15426,41137,66847
+EV003,Tata Power,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,71499,10724,28599,46474
+EV004,Tata Power,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,64714,9707,25885,42064
+EV005,Tata Power,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,75759,11363,30303,49243
+EV006,Tata Power,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,112922,16938,45168,73399
+EV007,Tata Power,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,41820,6273,16728,27183
+EV008,Tata Power,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,69711,10456,27884,45312
+EV009,Tata Power,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3438299,412595,1203404,2062979
+EV010,Tata Power,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3021174,362540,1057410,1812704
+EV011,Tata Power,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1520966,182515,532338,912579
+EV012,Tata Power,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2238539,268624,783488,1343123
+EV013,Tata Power,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2330602,279672,815710,1398361
+EV014,Tata Power,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1177512,141301,412129,706507
+EV015,ChargeZone,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,55753,8362,22301,36239
+EV016,ChargeZone,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,82162,12324,32864,53405
+EV017,ChargeZone,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,102549,15382,41019,66656
+EV018,ChargeZone,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,63235,9485,25294,41102
+EV019,ChargeZone,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,46749,7012,18699,30386
+EV020,ChargeZone,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,29137,4370,11654,18939
+EV021,ChargeZone,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,26250,3937,10500,17062
+EV022,ChargeZone,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,59775,8966,23910,38853
+EV023,ChargeZone,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2737079,328449,957977,1642247
+EV024,ChargeZone,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1166922,140030,408422,700153
+EV025,ChargeZone,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2431548,291785,851041,1458928
+EV026,ChargeZone,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1086469,130376,380264,651881
+EV027,ChargeZone,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1112082,133449,389228,667249
+EV028,ChargeZone,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3211646,385397,1124076,1926987
+EV029,Statiq,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,117647,17647,47058,76470
+EV030,Statiq,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,35463,5319,14185,23050
+EV031,Statiq,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,99779,14966,39911,64856
+EV032,Statiq,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,73773,11065,29509,47952
+EV033,Statiq,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,83252,12487,33300,54113
+EV034,Statiq,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,41969,6295,16787,27279
+EV035,Statiq,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,43345,6501,17338,28174
+EV036,Statiq,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,57559,8633,23023,37413
+EV037,Statiq,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,839695,100763,293893,503817
+EV038,Statiq,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3438322,412598,1203412,2062993
+EV039,Statiq,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2480746,297689,868261,1488447
+EV040,Statiq,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1726289,207154,604201,1035773
+EV041,Statiq,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1857326,222879,650064,1114395
+EV042,Statiq,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1265080,151809,442778,759048
+EV043,Servotech,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,100288,15043,40115,65187
+EV044,Servotech,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,88471,13270,35388,57506
+EV045,Servotech,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,44176,6626,17670,28714
+EV046,Servotech,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,46022,6903,18408,29914
+EV047,Servotech,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,92206,13830,36882,59933
+EV048,Servotech,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,32429,4864,12971,21078
+EV049,Servotech,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,37770,5665,15108,24550
+EV050,Servotech,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,71933,10789,28773,46756
+EV051,Servotech,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1857343,222881,650070,1114405
+EV052,Servotech,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2778845,333461,972595,1667307
+EV053,Servotech,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1031179,123741,360912,618707
+EV054,Servotech,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3194395,383327,1118038,1916637
+EV055,Servotech,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3035472,364256,1062415,1821283
+EV056,Servotech,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2514459,301735,880060,1508675
+EV057,Exicom,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,58062,8709,23224,37740
+EV058,Exicom,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,82864,12429,33145,53861
+EV059,Exicom,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,95426,14313,38170,62026
+EV060,Exicom,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,57854,8678,23141,37605
+EV061,Exicom,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,55573,8335,22229,36122
+EV062,Exicom,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,69308,10396,27723,45050
+EV063,Exicom,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,88252,13237,35300,57363
+EV064,Exicom,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,75080,11262,30032,48802
+EV065,Exicom,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2838243,340589,993385,1702945
+EV066,Exicom,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1316633,157995,460821,789979
+EV067,Exicom,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1599090,191890,559681,959454
+EV068,Exicom,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2935953,352314,1027583,1761571
+EV069,Exicom,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2129143,255497,745200,1277485
+EV070,Exicom,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1358723,163046,475553,815233
+EV071,ABB,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,118847,17827,47538,77250
+EV072,ABB,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,98373,14755,39349,63942
+EV073,ABB,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,88265,13239,35306,57372
+EV074,ABB,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,100528,15079,40211,65343
+EV075,ABB,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,83219,12482,33287,54092
+EV076,ABB,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,73311,10996,29324,47652
+EV077,ABB,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,105171,15775,42068,68361
+EV078,ABB,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,53891,8083,21556,35029
+EV079,ABB,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2532103,303852,886236,1519261
+EV080,ABB,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1958848,235061,685596,1175308
+EV081,ABB,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,792054,95046,277218,475232
+EV082,ABB,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1661097,199331,581383,996658
+EV083,ABB,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,665717,79886,233000,399430
+EV084,ABB,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1751855,210222,613149,1051113
+EV085,Delta Electronics,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,86857,13028,34742,56457
+EV086,Delta Electronics,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,23586,3537,9434,15330
+EV087,Delta Electronics,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,89808,13471,35923,58375
+EV088,Delta Electronics,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,86255,12938,34502,56065
+EV089,Delta Electronics,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,23094,3464,9237,15011
+EV090,Delta Electronics,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,45348,6802,18139,29476
+EV091,Delta Electronics,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,63161,9474,25264,41054
+EV092,Delta Electronics,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,47466,7119,18986,30852
+EV093,Delta Electronics,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,868590,104230,304006,521154
+EV094,Delta Electronics,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,962781,115533,336973,577668
+EV095,Delta Electronics,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2177177,261261,762011,1306306
+EV096,Delta Electronics,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,769229,92307,269230,461537
+EV097,Delta Electronics,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2697967,323756,944288,1618780
+EV098,Delta Electronics,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2989418,358730,1046296,1793650
+EV099,Siemens,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,101526,15228,40610,65991
+EV100,Siemens,3.3 kW Smart AC Charger,AC,3.3 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,61877,9281,24750,40220
+EV101,Siemens,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,45078,6761,18031,29300
+EV102,Siemens,7.4 kW Smart AC Charger,AC,7.4 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,51222,7683,20488,33294
+EV103,Siemens,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,102208,15331,40883,66435
+EV104,Siemens,11 kW Smart AC Charger,AC,11 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,53332,7999,21332,34665
+EV105,Siemens,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,66189,9928,26475,43022
+EV106,Siemens,22 kW Smart AC Charger,AC,22 kW,"2W, 3W, EV Cars",Residential or commercial AC EV charger,93848,14077,37539,61001
+EV107,Siemens,30 kW DC Fast Charger,DC,30 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,2039044,244685,713665,1223426
+EV108,Siemens,60 kW DC Fast Charger,DC,60 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,677255,81270,237039,406353
+EV109,Siemens,120 kW DC Fast Charger,DC,120 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3341176,400941,1169411,2004705
+EV110,Siemens,180 kW DC Fast Charger,DC,180 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1772958,212754,620535,1063774
+EV111,Siemens,240 kW DC Fast Charger,DC,240 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,1742857,209142,609999,1045714
+EV112,Siemens,360 kW DC Fast Charger,DC,360 kW,"EV Cars, Buses, Commercial EVs",Public fast charging station,3057665,366919,1070182,1834599
