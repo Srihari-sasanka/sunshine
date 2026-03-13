@@ -1,0 +1,59 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+.sunshine-nav {
+  background: linear-gradient(90deg, #ff8a00, #ff5f6d);
+}
+
+.nav-logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.hero {
+  padding: 70px 20px 40px;
+  background: radial-gradient(circle at top, #fff3df, #f6f8ff);
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.card {
+  border: none;
+  border-radius: 14px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: #ff8800;
+  border: none;
+}
+.btn-primary:hover {
+  background: #e67600;
+}
+
+.brand-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  height: 100%;
+}
+
+.service-card img {
+  min-height: 220px;
+}
+
+.container {
+  max-width: 1150px;
+}
