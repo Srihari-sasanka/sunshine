@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sunshine Plans</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+      <h2 class="mb-3">Sunshine Plans</h2>
+      <p class="text-muted">These are the products available with the plan.</p>
+
+      <div id="plansRow" class="row gy-3"></div>
+
+      <div class="mt-4">
+        <a href="/" class="btn btn-link">Back to Home</a>
+      </div>
+    </div>
+
+    <script>
+      async function loadPlans() {
+        const res = await fetch('/api/plans');
+        const plans = await res.json();
+        const container = document.getElementById('plansRow');
+        container.innerHTML = '';
+        plans.forEach(p => {
+          const col = document.createElement('div');
+          col.className = 'col-md-4';
+          col.innerHTML = `
+            <div class="card h-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${p.plan_name}</h5>
+                <p class="card-text">Duration: ${p.duration_months} months<br>Amount: ₹${p.amount_inr}</p>
+                <div class="mt-auto">
+                  <button class="btn btn-success buy-btn" data-plan="${p.plan_name}">Buy Now</button>
+                </div>
+              </div>
+            </div>
+          `;
+          container.appendChild(col);
+        });
+
+        document.querySelectorAll('.buy-btn').forEach(btn => {
+          btn.addEventListener('click', () => startBuyFlow(btn.dataset.plan));
+        });
+      }
+
+      async function startBuyFlow(planName) {
+        const name = prompt("Enter your name (for plan purchase):");
+        if (!name) return;
+        const email = prompt("Enter your email:");
+        if (!email) return;
+        const password = prompt("Set a password for PID login:");
+        if (!password) return;
+
+        const payload = { name, email, password, plan_name: planName };
+        const res = await fetch('/api/buy-plan', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          const data = await res.json();
+          alert('Payment simulated. PID sent to your email. PID: ' + data.pid + '\n(Email delivery depends on SES/SMTP settings.)');
+          window.location.href = '/login';
+        } else {
+          const err = await res.json();
+          alert('Failed to purchase: ' + (err.error || 'error'));
+        }
+      }
+
+      loadPlans();
+    </script>
+  </body>
+</html>

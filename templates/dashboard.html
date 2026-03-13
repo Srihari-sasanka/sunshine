@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primary User Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-dark sunshine-nav">
+    <div class="container">
+      <a class="navbar-brand" href="/">Sunshine Services</a>
+      <button class="btn btn-outline-light" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <h3>Primary User Dashboard</h3>
+    <p class="text-muted">Select product, lease plan, upload affidavit document, complete payment, and submit request.</p>
+
+    <div class="card p-4 mb-4">
+      <form id="leaseForm" enctype="multipart/form-data">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Select Charger Product</label>
+            <select name="product_id" id="productSelect" class="form-select" required></select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Select Lease Plan</label>
+            <select name="plan_selected" class="form-select" required>
+              <option value="6 Month Plan">6 Month Plan</option>
+              <option value="12 Month Plan">12 Month Plan</option>
+              <option value="24 Month Plan">24 Month Plan</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Installation Location</label>
+            <input name="installation_location" id="installationLocation" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Upload Affidavit Document</label>
+            <input name="affidavit" type="file" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="mt-4 d-flex gap-2">
+          <button type="button" class="btn btn-warning" onclick="goPayment()">Proceed to Payment</button>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </div>
+      </form>
+      <div id="leaseMsg" class="mt-3"></div>
+    </div>
+
+    <div class="card p-4">
+      <h5>My Lease Requests</h5>
+      <div id="requestsArea" class="mt-3"></div>
+    </div>
+  </div>
+
+  <script>
+    const pid = localStorage.getItem('sun_pid');
+    if (!pid) location.href = '/primary-login';
+
+    function logout() {
+      localStorage.clear();
+      location.href = '/';
+    }
+
+    function goPayment() {
+      location.href = '/payment';
+    }
+
+    async function loadProducts() {
+      const res = await fetch('/api/products');
+      const products = await res.json();
+      const select = document.getElementById('productSelect');
+      select.innerHTML = '';
+      products.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.product_id;
+        opt.textContent = `${p.product_name} (${p.charger_type}, ${p.power_output})`;
+        select.appendChild(opt);
+      });
+    }
+
+    async function loadRequests() {
+      const res = await fetch('/api/lease-requests/' + pid);
+      const items = await res.json();
+      const area = document.getElementById('requestsArea');
+      if (!items.length) {
+        area.innerHTML = '<div class="text-muted">No requests yet.</div>';
+        return;
+      }
+
+      area.innerHTML = '';
+      items.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'border rounded p-3 mb-2';
+        div.innerHTML = `
+          <div><strong>Request ID:</strong> ${r.LeaseRequestID}</div>
+          <div><strong>Product:</strong> ${r.ProductName} (${r.ProductID})</div>
+          <div><strong>Plan:</strong> ${r.PlanSelected}</div>
+          <div><strong>Status:</strong> <span class="badge text-bg-info">${r.Status}</span></div>
+          <div class="mt-2 d-flex gap-2">
+            <select class="form-select form-select-sm status-select" style="max-width:260px;">
+              <option>Request Sent</option>
+              <option>Had Phone Conversation</option>
+              <option>Installation Completed</option>
+              <option>Request Rejected</option>
+            </select>
+            <button class="btn btn-sm btn-outline-primary update-status-btn">Update Status</button>
+          </div>
+        `;
+        const select = div.querySelector('.status-select');
+        select.value = r.Status || "Request Sent";
+        const btn = div.querySelector('.update-status-btn');
+        btn.addEventListener('click', async () => {
+          const status = select.value;
+          const resp = await fetch('/api/update-request-status', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({ lease_request_id: r.LeaseRequestID, status })
+          });
+          if (resp.ok) {
+            alert('Status updated');
+            loadRequests();
+          } else {
+            const e = await resp.json();
+            alert(e.error || 'Failed to update status');
+          }
+        });
+        area.appendChild(div);
+      });
+    }
+
+    document.getElementById('leaseForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('leaseMsg');
+      const form = e.target;
+      const fd = new FormData(form);
+      fd.append('pid', pid);
+      fd.append('payment_status', localStorage.getItem('payment_status') || 'Paid');
+
+      const res = await fetch('/api/create-lease-request', { method: 'POST', body: fd });
+      const data = await res.json();
+
+      if (res.ok) {
+        msg.innerHTML = `<div class="alert alert-success">${data.message} Request ID: ${data.LeaseRequestID}</div>`;
+        form.reset();
+        loadRequests();
+      } else {
+        msg.innerHTML = `<div class="alert alert-danger">${data.error || 'Failed'}</div>`;
+      }
+    });
+
+    document.getElementById('installationLocation').value = localStorage.getItem('sun_install_location') || '';
+    loadProducts();
+    loadRequests();
+  </script>
+</body>
+</html>

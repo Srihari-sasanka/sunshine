@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inventory - Sunshine Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js"></script>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="/dashboard">Sunshine Dashboard</a>
+        <div>
+          <button id="backBtn" class="btn btn-outline-secondary">Back</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-4">
+      <h3>Inventory</h3>
+      <div id="inventoryArea" class="row gy-3"></div>
+    </div>
+
+    <script>
+      const pid = localStorage.getItem('sun_pid');
+      if (!pid) {
+        alert('Not logged in. Redirecting to login.');
+        location.href = '/login';
+      }
+
+      document.getElementById('backBtn').addEventListener('click', () => {
+        location.href = '/dashboard';
+      });
+
+      async function loadInventory() {
+        const res = await fetch('/api/inventory');
+        if (!res.ok) {
+          document.getElementById('inventoryArea').innerHTML = '<div class="alert alert-danger">Failed to load inventory</div>';
+          return;
+        }
+        const grouped = await res.json();
+        const area = document.getElementById('inventoryArea');
+        area.innerHTML = '';
+        Object.keys(grouped).forEach(company => {
+          const services = grouped[company];
+          const card = document.createElement('div');
+          card.className = 'col-12';
+          let html = `<div class="card"><div class="card-body"><h5>${company}</h5>`;
+          services.forEach(s => {
+            html += `
+              <div class="border rounded p-2 my-2">
+                <div><strong>Product ID:</strong> ${s.product_id}</div>
+                <div><strong>Service:</strong> ${s.service_name}</div>
+                <div><strong>Quantity:</strong> ${s.quantity}</div>
+                <div class="mt-2">
+                  <button class="btn btn-sm btn-primary lease-btn" data-pid="${pid}" data-product="${s.product_id}">Lease Request</button>
+                </div>
+              </div>
+            `;
+          });
+          html += `</div></div>`;
+          card.innerHTML = html;
+          area.appendChild(card);
+        });
+
+        document.querySelectorAll('.lease-btn').forEach(b => {
+          b.addEventListener('click', async (ev) => {
+            const product_id = b.dataset.product;
+            const payload = { pid: pid, product_id };
+            const resp = await fetch('/api/lease-request', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(payload)
+            });
+            if (resp.ok) {
+              const data = await resp.json();
+              alert('Lease request created. Request ID: ' + data.request_id + '. Manufacturer will receive email.');
+            } else {
+              const err = await resp.json();
+              alert('Failed: ' + (err.error || 'error'));
+            }
+          });
+        });
+      }
+
+      loadInventory();
+    </script>
+  </body>
+</html>
